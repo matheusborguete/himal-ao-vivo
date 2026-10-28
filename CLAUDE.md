@@ -3,9 +3,9 @@
 Projeto didático da aula "Automação com IA" (curso de IA aplicada ao Marketing).
 Site da Himal (cafés especiais do Nepal) com um blog e uma área logada para publicar posts.
 
-- Produção: https://himal-cafe.web.app
+- Produção: https://himal-ao-vivo.web.app (aula ao vivo; referência completa: https://github.com/matheusborguete/himal-cafe)
 - Blog: `/blog/` · Post: `/blog/<slug>` · Painel: `/admin`
-- Projeto GCP/Firebase: `himal-cafe` (plano **Spark, gratuito, sem cartão**)
+- Projeto GCP/Firebase: `himal-ao-vivo` (plano **Spark, gratuito, sem cartão**)
 
 ## Arquitetura
 
@@ -23,7 +23,7 @@ firestore.rules       leitura pública; escrita só para o e-mail do admin
 - Sem build, sem framework: HTML + JavaScript puro com o SDK do Firebase via CDN.
 - Coleção `posts/{slug}`: `titulo`, `resumo`, `conteudo` (markdown simples), `imagem` (data URL JPEG ou link), `imagemAlt`, `criadoEm`.
 - A foto é reduzida no navegador e guardada no próprio documento (até ~700 KB), porque o Cloud Storage exige o plano Blaze (com cartão).
-- Login: o usuário digita `admin-himal` e o painel completa com `@himal-cafe.web.app`.
+- Login: o usuário digita `admin-himal` e o painel completa com `@himal-ao-vivo.web.app`.
 
 ## Regras para mexer no código
 

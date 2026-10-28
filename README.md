@@ -1,12 +1,12 @@
-> **Branch de segurança `sprint-0`** · Sprint 0: ponto de partida da aula. Site, blog, painel do blog e Clarity. Sem postador.
-> Para voltar ao projeto completo, use a branch `main`.
+> **Projeto da aula ao vivo (28/10/2026).** Começa no ponto de partida (site, blog e painel do blog) e ganha o postador do Instagram sprint a sprint.
+> Projeto de referência completo: https://github.com/matheusborguete/himal-cafe
 
 # Himal Café
 
 Site da **Himal**, com cafés especiais do Nepal, mais um blog e uma área logada para publicar posts.
 É o projeto prático da aula **Automação com IA**.
 
-🔗 https://himal-cafe.web.app · [Blog](https://himal-cafe.web.app/blog/)
+🔗 https://himal-ao-vivo.web.app · [Blog](https://himal-ao-vivo.web.app/blog/)
 
 ## O que tem aqui
 

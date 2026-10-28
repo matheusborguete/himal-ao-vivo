@@ -6,7 +6,7 @@ service cloud.firestore {
     // Se criar uma cópia do projeto, troque o e-mail abaixo pelo do seu admin.
     function ehAdmin() {
       return request.auth != null
-        && request.auth.token.email == 'admin-himal@himal-cafe.web.app';
+        && request.auth.token.email == 'admin-himal@himal-ao-vivo.web.app';
     }
 
     match /posts/{slug} {

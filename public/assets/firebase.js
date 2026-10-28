@@ -1,4 +1,4 @@
-// Conexão com o Firebase (projeto himal-cafe).
+// Conexão com o Firebase (projeto himal-ao-vivo).
 // Esta configuração é pública por natureza: quem protege os dados são as
 // regras do Firestore (firestore.rules), não esta chave.
 // Para usar em outro projeto, troque pelos dados de:
@@ -7,10 +7,10 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCDAnhH_hh7e8bnlbsHTrlE3tjO8EmBW8E",
-  authDomain: "himal-cafe.firebaseapp.com",
-  projectId: "himal-cafe",
-  appId: "1:921145946062:web:6679cce6c8d9e9706e459f",
+  apiKey: "AIzaSyDuzjL5Kf_l1mWXWByqO8LDJybN2L26zxI",
+  authDomain: "himal-ao-vivo.firebaseapp.com",
+  projectId: "himal-ao-vivo",
+  appId: "1:169261371756:web:fd69a78862f734a4712349",
 };
 
 export const app = initializeApp(firebaseConfig);
