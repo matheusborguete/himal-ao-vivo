@@ -25,6 +25,12 @@ firestore.rules       leitura pública; escrita só para o e-mail do admin
 - A foto é reduzida no navegador e guardada no próprio documento (até ~700 KB), porque o Cloud Storage exige o plano Blaze (com cartão).
 - Login: o usuário digita `admin-himal` e o painel completa com `@himal-ao-vivo.web.app`.
 
+## Postador do Instagram: marca e templates
+
+Marca e templates: editados no painel (`public/admin/postador.js`) e salvos no Firestore (`config/marca`, `templates/{nome}`,
+leitura pública, escrita só do admin). Cópia de reserva em `postador/marca.json` e `postador/templates/*.json`.
+O desenho da arte é um só arquivo, `public/assets/desenho.js`, usado na prévia do navegador e (na Sprint 2) no Node.
+
 ## Regras para mexer no código
 
 - Código simples e comentado em português: é material de aula.
