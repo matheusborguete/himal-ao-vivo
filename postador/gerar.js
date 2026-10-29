@@ -1,8 +1,8 @@
-// SPRINT 3 — Gera um post e manda para aprovação no Telegram.
-// Uso: npm run gerar   e depois   npm run escutar
+// PASSO 1 — Gera um post e manda para aprovação no Telegram.
+// Uso: npm run gerar   (no GitHub Actions roda sozinho todo dia)
 //
-// pauta (Google News) → texto (Gemini) → arte (template, sem IA) → Telegram com botões
-// Próxima etapa: sprint-4 publica no Instagram quando você aprova.
+// pauta (Google News) → texto (Gemini) → arte (template, sem IA)
+//   → salva no GitHub (URL pública da imagem) → Telegram com botões
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -11,6 +11,7 @@ import { gerarPost } from "./lib/gemini.js";
 import { desenharSlide } from "./lib/slide.js";
 import { carregarMarca, carregarTemplates } from "./lib/config.js";
 import { lerPosts, gravarPosts, atualizarPost, temasRecentes, RAIZ } from "./lib/estado.js";
+import { salvarNoGitHub, urlPublica } from "./lib/github.js";
 import { enviarRascunho } from "./lib/telegram.js";
 
 export async function gerarEEnviar() {
@@ -39,9 +40,14 @@ export async function gerarEEnviar() {
   const post = { id, status: "aguardando", criadoEm: new Date().toISOString(), template: template.nome, imagem: arquivo, ...conteudo };
   gravarPosts([...posts, post]);
 
-  // 4. Rascunho no Telegram (a foto vai direto do computador)
+  // 4. Sobe para o GitHub: a imagem passa a ter uma URL pública
+  const sha = salvarNoGitHub(`post ${id}: ${conteudo.tema}`);
+  post.imagemUrl = urlPublica(sha, arquivo);
+
+  // 5. Rascunho no Telegram
   post.telegramMsgId = await enviarRascunho({ chatId, post, imagem });
-  atualizarPost(id, { telegramMsgId: post.telegramMsgId });
+  atualizarPost(id, { imagemUrl: post.imagemUrl, telegramMsgId: post.telegramMsgId });
+  salvarNoGitHub(`post ${id}: enviado ao Telegram`);
   console.log(`Rascunho ${id} enviado ao Telegram`);
   return post;
 }
