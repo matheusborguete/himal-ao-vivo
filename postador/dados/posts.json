@@ -37,7 +37,7 @@
   },
   {
     "id": "20261029135640",
-    "status": "aguardando",
+    "status": "publicado",
     "criadoEm": "2026-10-29T13:56:40.043Z",
     "template": "template-1",
     "imagem": "imagens/20261029135640.jpg",
@@ -47,6 +47,10 @@
     "titulo": "A suavidade do café Hiun",
     "texto": "Notas delicadas de baunilha cultivadas nas encostas do Himalaia.",
     "legenda": "O café especial nos convida a perceber nuances sutilezas em cada xícara.\n\nO Nº 03 Hiun traz notas marcantes de baunilha em uma bebida suave, limpa e elegante. Um perfil pensado para quem aprecia delicadeza no método filtrado.\n\nCultivado por pequenos produtores no Nepal, este microlote reflete o solo e o clima únicos da cordilheira.\n\nDisponível com exclusividade no Kit Trilogia Himal.\n\nConheça o Kit Trilogia Himal pelo link na bio.\n\n#cafeespecial #himal #cafedonepal #specialtycoffee #cafecomcalma",
-    "noticiaUsada": ""
+    "noticiaUsada": "",
+    "imagemUrl": "https://cdn.jsdelivr.net/gh/matheusborguete/himal-ao-vivo@61c9b2df195dd3550ca7594208052cfb5ae77c4f/postador/imagens/20261029135640.jpg",
+    "publicadoEm": "2026-10-29T13:57:00.905Z",
+    "igId": "17888062026622196",
+    "permalink": "https://www.instagram.com/p/DfFKm9zFbi9/"
   }
 ]
