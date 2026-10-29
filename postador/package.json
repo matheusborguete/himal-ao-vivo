@@ -1,0 +1,16 @@
+{
+  "name": "himal-postador",
+  "description": "Postador semiautomático do Instagram da Himal (gera, pede aprovação no Telegram e publica)",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "slide": "node --env-file-if-exists=.env testar-slide.js",
+    "gerar": "node --env-file-if-exists=.env gerar.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.3"
+  }
+}

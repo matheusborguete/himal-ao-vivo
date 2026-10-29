@@ -29,7 +29,9 @@ firestore.rules       leitura pública; escrita só para o e-mail do admin
 
 Marca e templates: editados no painel (`public/admin/postador.js`) e salvos no Firestore (`config/marca`, `templates/{nome}`,
 leitura pública, escrita só do admin). Cópia de reserva em `postador/marca.json` e `postador/templates/*.json`.
-O desenho da arte é um só arquivo, `public/assets/desenho.js`, usado na prévia do navegador e (na Sprint 2) no Node.
+O desenho da arte é um só arquivo, `public/assets/desenho.js`, usado na prévia do navegador e no Node (`@napi-rs/canvas`).
+Gerador (`postador/`, Node 22 ESM): `npm run gerar` = Google News RSS → Gemini (JSON) → arte em `postador/imagens/`.
+Gemini: `gemini-flash-latest`, com troca para `gemini-flash-lite-latest` em 503 ou após 25 s. Chave em `postador/.env` (fora do git). Nunca imprimir.
 
 ## Regras para mexer no código
 
